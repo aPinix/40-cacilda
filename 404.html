@@ -8,14 +8,7 @@
   </head>
   <body>
     <script>
-      (function () {
-        // If there's a hash in the URL, use it as the path
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
+      window.location.href = '/';
     </script>
   </body>
 </html>
