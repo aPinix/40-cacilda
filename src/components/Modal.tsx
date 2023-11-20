@@ -5,6 +5,7 @@ interface Props {
   children?: React.ReactNode | React.ReactNode[];
   title?: string;
   body?: string;
+  extra?: string;
   startsOpen?: boolean | number;
   hasBackdrop?: boolean;
   closeOnBackdropClick?: boolean;
@@ -105,15 +106,23 @@ class Modal extends React.Component<Props, State> {
                         this.props.children ? `rounded-bl-none rounded-br-none border-b-0 pb-10` : ''
                       } flex transform flex-col items-center gap-8 overflow-hidden rounded-3xl border border-slate-50/10 bg-slate-800/50 px-10 py-16 text-slate-50 shadow-xl backdrop-blur-[20px] backdrop-saturate-[180%] transition-all`}
                     >
-                      {this.props.title ? (
-                        <Dialog.Title as="h3" className="flex justify-center text-center text-3xl font-bold">
-                          {this.props.title}
-                        </Dialog.Title>
-                      ) : null}
+                      <div className="flex flex-col gap-1">
+                        {this.props.title ? (
+                          <Dialog.Title as="h3" className="flex justify-center text-center text-3xl font-bold">
+                            {this.props.title}
+                          </Dialog.Title>
+                        ) : null}
 
-                      {this.props.body ? (
-                        <Dialog.Description className="flex flex-col items-center text-center leading-relaxed">
-                          {this.props.body}
+                        {this.props.body ? (
+                          <Dialog.Description className="flex flex-col items-center text-center leading-relaxed text-white/50">
+                            {this.props.body}
+                          </Dialog.Description>
+                        ) : null}
+                      </div>
+
+                      {this.props.extra ? (
+                        <Dialog.Description className="flex flex-col items-center text-center text-5xl leading-relaxed drop-shadow-xl">
+                          {this.props.extra}
                         </Dialog.Description>
                       ) : null}
                     </div>

@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { isUserDataFetched, guestsData, guestFamilyData } from '../data/atoms';
 import { useAtom } from 'jotai';
 import fetchData from '../utils/Data';
-import { GuestTypeE, RoutePathsE } from '../models/Models';
+import { GuestTypeE, RoutePathsE, basePath } from '../models/Models';
 import { gsap } from 'gsap';
 import { useResizeListener } from '../hooks/useResize';
 
 import imgCover from '../assets/images/poster.jpg';
 import imgCallMe from '../assets/images/call-me.png';
+import imgMe from '../assets/images/me.png';
 import ConfettiExplosion from 'react-confetti-explosion';
 
 export const Home: FC = () => {
@@ -52,7 +53,7 @@ export const Home: FC = () => {
             setTimeout(() => {
               setIsExploding(false);
             }, explodingDuration);
-          }, 1000);
+          }, 500);
         }
       }
     });
@@ -72,7 +73,9 @@ export const Home: FC = () => {
       const safeOffset = 40;
       const stopHeight = ticketTopBounds.height + safeOffset * 2;
 
-      gsap.set('.ticket-info', { y: -(ticketTopBounds.top - posterImageBounds.top - posterImageBounds.height + stopHeight - safeOffset) });
+      gsap.set('.ticket-info', {
+        y: -(ticketTopBounds.top - posterImageBounds.top - posterImageBounds.height + stopHeight - safeOffset * 2),
+      });
       gsap.timeline({
         scrollTrigger: {
           trigger: '.ticket-info',
@@ -136,6 +139,47 @@ export const Home: FC = () => {
     const regex = /\(([^)]+)\)/;
     name = name.replace(regex, '').trim();
     return name;
+  };
+
+  const playSound = () => {
+    const pathPrefix = `/${basePath}/sounds/`;
+    const pathFileExtension = '.mp3';
+    const soundNames = [
+      'abasir',
+      'abre_los_hojos',
+      'agora_demora-te',
+      'alimpa-te_saraiva',
+      'arghhhh',
+      'atao_ha',
+      'banzawayyyy',
+      'ch_ch_vousen',
+      'ehhh_cacilda',
+      'ftiiiihhh',
+      'grrrrr',
+      'na_sossegas_ha',
+      'na_te_mexas',
+      'o_alcool_da_cozinha',
+      'o_socio_deves_ser_filho_de_gente_parva_ou_jovem_mete_nojo',
+      'olha_la_pa',
+      'pabadacas',
+      'pchhhteii',
+      'porque_te_chamam_cara_de_cu',
+      'sai_de_cima_da_arca_e_da_la_uma_bini',
+      'seu_estupido',
+      'sim_sim_simmmmm',
+      'ta_queeeeto',
+      'take_5',
+      'tal_nao_e_ha',
+      'tirodedo_dai',
+      'vai_haver_bolo_pa_todos',
+      'yarrrrgggg',
+      'yololooo',
+      'zomus',
+    ];
+    const sounds = soundNames.map((name) => `${pathPrefix}${name}${pathFileExtension}`);
+    const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
+    const audio = new Audio(randomSound);
+    audio.play();
   };
 
   return (
@@ -253,7 +297,12 @@ export const Home: FC = () => {
 
               {/* calendar */}
               <div className="section-inner flex flex-col gap-4">
-                <div className="pb-6 text-3xl">Programação</div>
+                <div className="flex flex-col gap-2 pb-6">
+                  <div className="text-3xl">Programação</div>
+                  <span className="inline-flex items-center justify-center self-start rounded-lg bg-lime-600 px-[6px] py-[3px] text-base font-medium text-slate-50">
+                    Dia 25 Nov
+                  </span>
+                </div>
                 <div className="info mid">
                   {/* <div className="art">🧆</div> */}
                   <div className="flex flex-col gap-1">
@@ -355,7 +404,7 @@ export const Home: FC = () => {
                 </div>
               </div>
 
-              {/* final */}
+              {/* call */}
               <div className="section-inner section-inner--enjoy section-inner--no-pad--bottom !bg-lime-200">
                 <div className="title !text-green-600">Se precisares de ligar!</div>
                 <div className="made">
@@ -363,6 +412,11 @@ export const Home: FC = () => {
                     <img className="!h-28 !w-28" src={imgCallMe} alt="Call Me" />
                   </a>
                 </div>
+              </div>
+
+              {/* me */}
+              <div className="section-inner section-inner--enjoy section-inner--no-pad--bottom !border-none !bg-transparent !pt-0">
+                <img className="rotate-180" src={imgMe} alt="Me" onClick={playSound} />
               </div>
             </div>
           </div>

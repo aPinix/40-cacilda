@@ -1,8 +1,9 @@
+import { basePath } from '../models/Models';
 import { getJsonData } from './Convert';
 
 const fetchData = async () => {
   try {
-    const response = await fetch('/data.txt');
+    const response = await fetch(`/${basePath}/data.txt`);
     const data = await response.text();
     const parsedData = JSON.parse(getJsonData(data));
     return parsedData;

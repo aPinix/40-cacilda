@@ -18,13 +18,15 @@
     outline-none
     backdrop-blur-[20px]
     backdrop-saturate-[180%]
-    transition-all
-    hover:bg-opacity-10
-    focus:bg-opacity-10
-    active:bg-opacity-70;
+    transition-all;
+
+  &:not(:disabled) {
+    @apply hover:bg-opacity-10
+      focus:bg-opacity-10
+      active:bg-opacity-70;
+  }
 
   &:disabled {
-    filter: grayscale(100%);
-    cursor: not-allowed;
+    @apply cursor-not-allowed bg-pink-700/50 grayscale;
   }
 }

@@ -52,7 +52,7 @@ export const Login: FC = () => {
   return (
     <>
       {!isFetching ? (
-        <Modal title="Insere o Código" body="Usa o código que te foi enviado!" startsOpen={true}>
+        <Modal title="Insere o Código" body="Vê se descobres o 'Easter-Egg'" extra="👆 + 🔊 = 😆" startsOpen={true}>
           <form className="translucent flex w-full flex-col rounded-b-3xl" onSubmit={handleSubmit}>
             <input
               className="input w-full text-center"
@@ -61,7 +61,7 @@ export const Login: FC = () => {
               onChange={(event) => setInputValue(event.target.value)}
               placeholder="Enter code"
             />
-            <button className="btn !rounded-b-3xl !rounded-t-none" type="submit">
+            <button className="btn !rounded-b-3xl !rounded-t-none" type="submit" disabled={inputValue.trim() === ''}>
               Submit
             </button>
           </form>

@@ -1,9 +1,10 @@
 // routes --------------------
 
+export const basePath = '40-cacilda';
+
 export const RoutePathsE = {
-  Home: '/',
-  Login: '/login',
-  About: '/about',
+  Home: `/${basePath}/40-cacilda`,
+  Login: `/${basePath}/login`,
 } as const;
 export type RoutePathsT = (typeof RoutePathsE)[keyof typeof RoutePathsE];
 
