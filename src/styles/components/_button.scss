@@ -1,0 +1,30 @@
+.btn {
+  @apply inline-block
+    h-[60px]
+    min-h-[60px]
+    flex-1
+    cursor-pointer
+    appearance-none
+    items-center
+    justify-center
+    border-slate-50/10
+    bg-slate-800
+    bg-opacity-50
+    px-6
+    text-base
+    font-bold
+    text-slate-50
+    shadow-xl
+    outline-none
+    backdrop-blur-[20px]
+    backdrop-saturate-[180%]
+    transition-all
+    hover:bg-opacity-10
+    focus:bg-opacity-10
+    active:bg-opacity-70;
+
+  &:disabled {
+    filter: grayscale(100%);
+    cursor: not-allowed;
+  }
+}

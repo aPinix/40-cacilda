@@ -1,0 +1,37 @@
+// tailwindcss --------------------
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// fonts --------------------
+
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap';
+
+// base --------------------
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+  background-color: #a4ee00;
+  background-image: url('assets/images/poster-blur.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 140%;
+  background-repeat: no-repeat;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// main --------------------
+
+@import 'styles/main';

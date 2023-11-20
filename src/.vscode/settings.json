@@ -1,0 +1,74 @@
+{
+  // eslint
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "html",
+    "javascriptreact",
+    "typescriptreact",
+    "jsx",
+    "tsx",
+    "json",
+    "jsonc"
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".html",
+      ".json",
+      ".jsonc"
+    ]
+  },
+
+  // stylelint
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "sass"
+  ],
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+
+  // code actions
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+  // formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+
+  // editor
+  "editor.rulers": [140],
+}
