@@ -52,7 +52,7 @@ export const Login: FC = () => {
   return (
     <>
       {!isFetching ? (
-        <Modal title="Insere o Código" body="Vê se descobres o 'Easter-Egg'" extra="👆 + 🔊 = 😆" startsOpen={true}>
+        <Modal title="Insere o Código" body="Vê se descobres a 'Surpresa'\n(dica em baixo)" extra="👆 + 🔊 = 😆" startsOpen={true}>
           <form className="translucent flex w-full flex-col rounded-b-3xl" onSubmit={handleSubmit}>
             <input
               className="input w-full text-center"

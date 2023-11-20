@@ -27,6 +27,6 @@
   }
 
   &:disabled {
-    @apply cursor-not-allowed bg-pink-700/50 grayscale;
+    @apply cursor-not-allowed bg-pink-700/50 text-opacity-20 grayscale;
   }
 }

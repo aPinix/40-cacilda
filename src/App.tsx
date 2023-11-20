@@ -12,7 +12,7 @@ import { basePath } from './configs/variables';
 const App: FC = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  console.log('basePath:', basePath);
+  // console.log('basePath:', basePath);
 
   return (
     <>

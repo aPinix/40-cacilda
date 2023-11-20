@@ -104,9 +104,9 @@ class Modal extends React.Component<Props, State> {
                     <div
                       className={`${
                         this.props.children ? `rounded-bl-none rounded-br-none border-b-0 pb-10` : ''
-                      } flex transform flex-col items-center gap-8 overflow-hidden rounded-3xl border border-slate-50/10 bg-slate-800/50 px-10 py-16 text-slate-50 shadow-xl backdrop-blur-[20px] backdrop-saturate-[180%] transition-all`}
+                      } flex transform flex-col items-center gap-6 overflow-hidden rounded-3xl border border-slate-50/10 bg-slate-800/50 px-10 py-16 text-slate-50 shadow-xl backdrop-blur-[20px] backdrop-saturate-[180%] transition-all`}
                     >
-                      <div className="flex flex-col gap-1">
+                      <div className="flex flex-col gap-4">
                         {this.props.title ? (
                           <Dialog.Title as="h3" className="flex justify-center text-center text-3xl font-bold">
                             {this.props.title}
@@ -114,9 +114,13 @@ class Modal extends React.Component<Props, State> {
                         ) : null}
 
                         {this.props.body ? (
-                          <Dialog.Description className="flex flex-col items-center text-center leading-relaxed text-white/50">
-                            {this.props.body}
-                          </Dialog.Description>
+                          <div className="flex flex-col gap-1">
+                            {this.props.body.split('\\n').map((item) => (
+                              <Dialog.Description key={item} className="flex flex-col items-center text-center leading-tight text-white/50">
+                                {item}
+                              </Dialog.Description>
+                            ))}
+                          </div>
                         ) : null}
                       </div>
 

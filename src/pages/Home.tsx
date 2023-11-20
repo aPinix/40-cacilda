@@ -29,9 +29,9 @@ export const Home: FC = () => {
 
   const explodingDuration = 3000;
   const explodeProps = {
-    force: 0.5,
+    force: 0.8,
     duration: explodingDuration,
-    particleCount: 450,
+    particleCount: 500,
     width: window.innerWidth,
   };
 
@@ -220,7 +220,7 @@ export const Home: FC = () => {
               {/* invite */}
               {jsonFamilyData ? (
                 <div ref={ticketTopRef} className="section-inner flex flex-col gap-4 bg-slate-50">
-                  <div className="pb-6 text-3xl">Convite{jsonFamilyData.family.length > 1 ? 's' : ''}</div>
+                  <div className="pb-6 text-3xl">Convite{jsonFamilyData.people.length > 1 ? 's' : ''}</div>
                   {jsonFamilyData.people.map((item, index) => {
                     return (
                       <React.Fragment key={item.name}>
@@ -240,7 +240,7 @@ export const Home: FC = () => {
                                 <React.Fragment key={key}>
                                   {key === 'lunch' ? (
                                     <div className="flex flex-col gap-2">
-                                      <div className="label">Almoço</div>
+                                      <div className="label text-xs sm:text-sm">Almoço</div>
                                       <div className="value flex items-center justify-center">
                                         <div
                                           className={`inline-flex h-4 w-4 rounded-full border-2 ${
@@ -252,7 +252,7 @@ export const Home: FC = () => {
                                   ) : null}
                                   {key === 'kart' ? (
                                     <div className="flex flex-col gap-2">
-                                      <div className="label">Karts</div>
+                                      <div className="label text-xs sm:text-sm">Karts</div>
                                       <div className="value flex items-center justify-center">
                                         <div
                                           className={`inline-flex h-4 w-4 rounded-full border-2 ${
@@ -264,7 +264,7 @@ export const Home: FC = () => {
                                   ) : null}
                                   {key === 'dinner' ? (
                                     <div className="flex flex-col gap-2">
-                                      <div className="label">Jantar</div>
+                                      <div className="label text-xs sm:text-sm">Jantar</div>
                                       <div className="value flex items-center justify-center">
                                         <div
                                           className={`inline-flex h-4 w-4 rounded-full border-2 ${
@@ -276,7 +276,7 @@ export const Home: FC = () => {
                                   ) : null}
                                   {key === 'party' ? (
                                     <div className="flex flex-col gap-2">
-                                      <div className="label">Festa</div>
+                                      <div className="label text-xs sm:text-sm">Festa</div>
                                       <div className="value flex items-center justify-center">
                                         <div
                                           className={`inline-flex h-4 w-4 rounded-full border-2 ${
