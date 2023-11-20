@@ -3,10 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://apinix.github.io/40-cacilda/",
+  "homepage": "https://apinix.github.io/40-cacilda",
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
+    "predeploy": "bun run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
