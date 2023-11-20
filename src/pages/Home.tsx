@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { isUserDataFetched, guestsData, guestFamilyData } from '../data/atoms';
 import { useAtom } from 'jotai';
 import fetchData from '../utils/Data';
-import { GuestTypeE, RoutePathsE, basePath } from '../models/Models';
+import { GuestTypeE, RoutePathsE } from '../models/Models';
 import { gsap } from 'gsap';
 import { useResizeListener } from '../hooks/useResize';
 
@@ -11,6 +11,8 @@ import imgCover from '../assets/images/poster.jpg';
 import imgCallMe from '../assets/images/call-me.png';
 import imgMe from '../assets/images/me.png';
 import ConfettiExplosion from 'react-confetti-explosion';
+import { basePath } from '../configs/variables';
+import { removeDuplicateSlashes } from '../utils/String';
 
 export const Home: FC = () => {
   const navigate = useNavigate();
@@ -142,7 +144,7 @@ export const Home: FC = () => {
   };
 
   const playSound = () => {
-    const pathPrefix = `/${basePath}/sounds/`;
+    const pathPrefix = removeDuplicateSlashes(`${basePath}/sounds/`);
     const pathFileExtension = '.mp3';
     const soundNames = [
       'abasir',
@@ -184,7 +186,7 @@ export const Home: FC = () => {
 
   return (
     <>
-      <div className="image-body">
+      <div className="image-body pointer-events-none z-[9999]">
         {isExploding ? (
           <div className="absolute left-1/2 top-1/4 z-[99999]">
             <ConfettiExplosion {...explodeProps} />

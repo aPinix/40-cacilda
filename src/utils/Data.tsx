@@ -1,9 +1,10 @@
-import { basePath } from '../models/Models';
+import { basePath } from '../configs/variables';
 import { getJsonData } from './Convert';
+import { removeDuplicateSlashes } from './String';
 
 const fetchData = async () => {
   try {
-    const response = await fetch(`/${basePath}/data.txt`);
+    const response = await fetch(removeDuplicateSlashes(`${basePath}/data.txt`));
     const data = await response.text();
     const parsedData = JSON.parse(getJsonData(data));
     return parsedData;

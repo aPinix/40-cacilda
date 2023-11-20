@@ -37,6 +37,10 @@ $color-darkest: #273444;
   @apply border border-slate-50/10 bg-slate-800/50 text-slate-50 shadow-xl backdrop-blur-[20px] backdrop-saturate-[180%];
 }
 
+[class*='confetti-explosion-screen'] {
+  z-index: 9999;
+}
+
 .image-body {
   width: 200%;
   height: 200%;
