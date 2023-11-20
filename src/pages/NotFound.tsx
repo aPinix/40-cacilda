@@ -11,5 +11,5 @@ export const NotFound: FC = () => {
     }, 1000);
   }, [navigate]);
 
-  return <h1>NotFound</h1>;
+  return <></>;
 };
