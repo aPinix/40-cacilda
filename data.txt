@@ -10,8 +10,8 @@ Rita Botas,Bro,Z5a@6B,✅,✅,⛔️,✅,✅,,,
 Trinca,Trinca,D7f#8G,✅,✅,✅,⛔️,✅,,,
 Ana Raquel (Trinca),Trinca,J1m@3K,✅,✅,⛔️,⛔️,✅,,,
 Leonor (Trinca),Trinca,N8p#9Q,✅,✅,⛔️,⛔️,✅,,,-5 years
-Miguel Alves,Bullix,T4v@5W,✅,⛔️,✅,✅,✅,,,
-Ana Botto (Alves),Bullix,X0y#2Z,✅,⛔️,⛔️,✅,✅,,,
+Miguel Alves,Bullix,T4v@5W,✅,⛔️,⛔️,✅,✅,,,
+Ana Botto (Alves),Bullix,X0y#2Z,✅,⛔️,⛔️,⛔️,⛔️,,,
 Pedrinho (Alves),Bullix,E6c@7H,✅,⛔️,⛔️,✅,✅,,,10+ years
 Raul Perdigão,Rola,L2i#3J,✅,⛔️,⛔️,⛔️,⛔️,,,
 Sandra (Perdigão),Rola,R9n@0S,✅,⛔️,⛔️,⛔️,⛔️,,,
