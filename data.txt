@@ -50,8 +50,8 @@ Duarte (Teixeira),Teixeira,V0k@8G,✅,⛔️,⛔️,✅,✅,,,-5 years
 Amaral,Amaral,I7n#4J,✅,✅,✅,✅,✅,,,
 Rita (Amaral),Amaral,H4q@6L,✅,✅,⛔️,✅,✅,,,
 Beatriz (Amaral),Amaral,Q1u#9O,✅,✅,⛔️,✅,✅,,,5-10 years
-Turão,Torão,M8y@2P,✅,✅,⛔️,✅,✅,✅,,
-Neusa,Torão,C5c#7H,✅,✅,⛔️,✅,✅,,,
+Turão,Torão,M8y@2P,✅,⛔️,⛔️,✅,✅,✅,,
+Neusa,Torão,C5c#7H,✅,⛔️,⛔️,✅,✅,,,
 Rashid,Rashid,S2g@9K,✅,✅,✅,✅,✅,✅,,
 Bárbara,Rashid,A9l#3M,✅,⛔️,⛔️,✅,✅,,,
 Margarida Ferro,Magui,W6p@1R,✅,⛔️,⛔️,✅,✅,,,
